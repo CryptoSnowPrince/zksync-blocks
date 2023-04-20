@@ -1,42 +1,16 @@
-type TokenAddition @entity(immutable: true) {
-  id: Bytes!
-  _token: Bytes! # address
-  blockNumber: BigInt!
-  blockTimestamp: BigInt!
-  transactionHash: Bytes!
-}
-
-type TokenRemoval @entity(immutable: true) {
-  id: Bytes!
-  _token: Bytes! # address
-  blockNumber: BigInt!
-  blockTimestamp: BigInt!
-  transactionHash: Bytes!
-}
-
-type ConverterAddition @entity(immutable: true) {
-  id: Bytes!
-  _token: Bytes! # address
-  _address: Bytes! # address
-  blockNumber: BigInt!
-  blockTimestamp: BigInt!
-  transactionHash: Bytes!
-}
-
-type ConverterRemoval @entity(immutable: true) {
-  id: Bytes!
-  _token: Bytes! # address
-  _address: Bytes! # address
-  blockNumber: BigInt!
-  blockTimestamp: BigInt!
-  transactionHash: Bytes!
-}
-
-type OwnerUpdate @entity(immutable: true) {
-  id: Bytes!
-  _prevOwner: Bytes! # address
-  _newOwner: Bytes! # address
-  blockNumber: BigInt!
-  blockTimestamp: BigInt!
-  transactionHash: Bytes!
+type Block @entity {
+  id: ID!
+  number: BigInt!
+  timestamp: BigInt!
+  parentHash: String
+  author: String
+  difficulty: BigInt
+  totalDifficulty: BigInt
+  gasUsed: BigInt
+  gasLimit: BigInt
+  receiptsRoot: String
+  transactionsRoot: String
+  stateRoot: String
+  size: BigInt
+  unclesHash: String
 }
