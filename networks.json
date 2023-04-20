@@ -2,7 +2,7 @@
   "zksync-era": {
     "Factory": {
       "address": "0x63E6fdAdb86Ea26f917496bEEEAEa4efb319229F",
-      "startBlock": 1840000
+      "startBlock": 1000000
     }
   }
 }
